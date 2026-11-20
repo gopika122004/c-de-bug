@@ -185,7 +185,7 @@ int main() {
 }`,
  err:"error: expected ‘;’ before ‘printf’",out:"Sum = 12",hint:"Look at line 3. How should a statement end in C?"},
 
-{t:"Wrong format specifier",task:"Price 99.5 print aaganum, but garbage varuthu.",
+{t:"Wrong format specifier",task:" ",
  bug:String.raw`#include <stdio.h>
 int main() {
     float price = 99.5;
@@ -200,7 +200,7 @@ int main() {
 }`,
  err:"Output: Price = 0   (garbage / wrong value)",out:"Price = 99.500000",okRe:/^Price = 99\.5\d*$/,hint:"Which format specifier prints a float? %d is only for integers."},
 
-{t:"One equals or two?",task:"n = 5. Output “Not ten” varanum, but “Ten” varuthu!",
+{t:"One equals or two?",task:" ",
  bug:String.raw`#include <stdio.h>
 int main() {
     int n = 5;
@@ -221,7 +221,7 @@ int main() {
 }`,
  err:"Output: Ten   (wrong! n is 5)",out:"Not ten",hint:"The if condition assigns a value instead of comparing. Which operator compares two values?"},
 
-{t:"Loop never ends",task:"1 to 5 print aaganum, but program stop aagala.",
+{t:"Loop never ends",task:" ",
  bug:String.raw`#include <stdio.h>
 int main() {
     int i;
@@ -261,7 +261,7 @@ int main() {
 }`,
  err:"Output: Sum = garbage value (a[5] doesn’t exist)",out:"Sum = 15",hint:"An array of size 5 has valid indexes 0 to what?"},
 
-{t:"Uninitialized variable",task:"5! = 120 varanum, but random number varuthu.",
+{t:"Uninitialized variable",task:" ",
  bug:String.raw`#include <stdio.h>
 int main() {
     int i, fact;
@@ -280,7 +280,7 @@ int main() {
 }`,
  err:"Output: Factorial = garbage value",out:"Factorial = 120",hint:"fact has no starting value. What should it start with when you are multiplying?"},
 
-{t:"The sneaky semicolon",task:"“Hi” 3 time varanum, but 1 time mattum varuthu.",
+{t:"The sneaky semicolon",task:" ",
  bug:String.raw`#include <stdio.h>
 int main() {
     int i;
@@ -297,7 +297,7 @@ int main() {
 }`,
  err:"Output: Hi   (only once)",out:"Hi\nHi\nHi",hint:"Look at the end of the for line. There is one extra character."},
 
-{t:"Switch fall-through",task:"day = 2 na “Tue” mattum varanum.",
+{t:"Switch fall-through",task:" ",
  bug:String.raw`#include <stdio.h>
 int main() {
     int day = 2;
